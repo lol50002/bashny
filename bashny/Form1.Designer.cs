@@ -38,6 +38,8 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.lt = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -112,6 +114,10 @@
             this.pictureBox7.Size = new System.Drawing.Size(177, 27);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Tag = "3";
+            this.pictureBox7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
+            this.pictureBox7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseUp);
             // 
             // pictureBox8
             // 
@@ -121,6 +127,7 @@
             this.pictureBox8.Size = new System.Drawing.Size(105, 27);
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Tag = "1";
             this.pictureBox8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
             this.pictureBox8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             this.pictureBox8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseUp);
@@ -133,6 +140,10 @@
             this.pictureBox9.Size = new System.Drawing.Size(135, 27);
             this.pictureBox9.TabIndex = 8;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Tag = "2";
+            this.pictureBox9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
+            this.pictureBox9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseUp);
             // 
             // lt
             // 
@@ -142,15 +153,36 @@
             this.lt.Size = new System.Drawing.Size(77, 27);
             this.lt.TabIndex = 9;
             this.lt.TabStop = false;
-            this.lt.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lt_MouseDown);
-            this.lt.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lt_MouseMove);
-            this.lt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lt_MouseUp);
+            this.lt.Tag = "0";
+            this.lt.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.lt.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
+            this.lt.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseUp);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(939, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "label2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1060, 528);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lt);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
@@ -163,6 +195,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -174,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lt)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -189,6 +223,8 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox lt;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
